@@ -1,3 +1,5 @@
+
+
 # KYC analysis and improvement
 
 ## Objective: 
@@ -8,3 +10,6 @@ Revolut KYC case study
 
 **bold**
 *italics*
+
+
+T
