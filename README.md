@@ -1,4 +1,4 @@
-
+![KYC logo](images/kyc.png)
 
 # KYC analysis and improvement
 
