@@ -10,11 +10,12 @@ Analyzed the KYC process to uncover key drivers behind the declining pass rate o
 ## Problem statement 
 
 ## Project structure 
-.
+```.
 ├── data/                # Raw data files
 ├── images/              # Project logo
 ├── notebook/            # Jupiter notebook with analysis
 ├── README.md
+```
 
 ## Dataset: 
 Source: Revolut KYC case study 
