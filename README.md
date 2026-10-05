@@ -4,13 +4,18 @@
 
 # KYC analysis and improvement
 
-## Objective: 
-Analyze the Know your Customer (KYC) process to uncover key drivers behind the declining pass rate over time, and develop actionable recommendations to address root causes. A process optimization challenge within a rapidly scaling neobank.
+## TL;DR 
+The KYC pass rate decline is a document check problem, not a facial check problem. About 78% of failed checks fail on the document step alone, and most of those failures are documents the system could not read at all. A new "rejected" failure mode appears during the period and becomes the dominant driver by October. Separately, roughly 15% of repeat checks are run on customers who had already passed, which is avoidable cost.
 
-## Problem statement 
-A neobank must conduct a Know Your Customer (KYC) process to verify the identity of all customers during the account opening procedure. This process consists of two main checks: a Document Verification and a Facial Similarity Check. Customers successfully pass KYC only if they clear both checks. Recently, the overall KYC pass rate has declined significantly.
+## The Business Problem
+A fast-scaling neobank verifies every new customer through two checks during account opening:
 
-The KYC pass rate is defined as the number of customers who successfully pass both checks, divided by the total number of customers who attempt the KYC process.
+  __Document verification__: is the ID document genuine, readable and valid?
+  __Facial similarity__: does the selfie match the photo on the document?
+
+A customer passes KYC only if both checks are clear. The pass rate has been falling, which means more good customers dropping out of onboarding, more manual review and higher verification spend. The goal was to find the root cause and recommend fixes.
+
+KYC pass rate = customers who clear both checks / customers who attempt KYC.
 
 ## Project structure 
 ```.
