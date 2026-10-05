@@ -28,6 +28,7 @@ Source: Revolut KYC case study
   
 176,404 KYC attempts from 142,724 users, May to October 2017.
 
+
 ## Methodology 
 - Data cleanup 
 - Exploratory Data Analysis
@@ -35,7 +36,10 @@ Source: Revolut KYC case study
 - Deep dive into failed document checks
 - Analysis of users with multiple attempts 
 
+
 ## Results
+<img width="988" height="422" alt="image" src="https://github.com/user-attachments/assets/3d7110ff-eb8a-4e45-aa21-b560b0263fbb" />
+
 The KYC pass rate dropped from ~97% (mid June to early July) to ~72% (early October).
   - The document check is the main driver. ~78% of failed checks fail on the document check only. The facial check improved over the same period.
   - Two separate issues in the document check:
@@ -43,12 +47,16 @@ The KYC pass rate dropped from ~97% (mid June to early July) to ~72% (early Octo
       2. From mid September to the end of October, a new document quality check flagged up to ~21% of checks as caution, mainly passports and UK documents (~34% caution vs ~3% before). It drops back suddenly at the end of October.
   - Users who get a rejected result often give up: only ~33% of them eventually pass vs ~93% of other users.
   - 5,788 checks (3.3%) were done by users who had already passed, an unnecessary cost.
+    
+<img width="886" height="421" alt="image" src="https://github.com/user-attachments/assets/db4b5d0d-d3a6-41e4-a68d-cffdcdb7aad2" />
+
 
 ## Recommendations
   1. Find out what changed around 11 July (app release, photo capture flow or vendor settings)
   2. Check image quality in the app before upload (blur, glare, document in frame) so users can retake the photo straight away
   3. Confirm with the vendor what changed in the document quality check, and monitor caution rates by document type and country to catch similar issues early
   4. Block new KYC submissions once a user has passed
+
 
 ## How to run
 pip install -r requirements.txt
